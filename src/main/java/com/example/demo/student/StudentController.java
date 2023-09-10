@@ -23,6 +23,12 @@ public class StudentController {
   public List<Student> getStudents() {
     return studentService.getStudents();
   }
+
+  @PostMapping
+  public List<Student> registerNewStudent(@RequestBody Student student) {
+    return studentService.addNewStudent(student);
+  }
+
 }
 
 
